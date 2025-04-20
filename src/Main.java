@@ -18,10 +18,10 @@ public class Main {
         // Задача 2
         float g = 27.12f;
         long h = 987678965549L;
-        float i = 2.786f;
+        double i = 2.786;
         short j = 569;
         short k = -159;
-        short l = 27897;
+        int l = 27897;
         byte m = 67;
 
         // Задача 3
