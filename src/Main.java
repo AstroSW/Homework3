@@ -25,49 +25,68 @@ public class Main {
         byte m = 67;
 
         // Задача 3
-        byte class1 = 23;
-        byte class2 = 27;
-        byte class3 = 30;
-        short paper = 480;
+        int class1 = 23;
+        int class2 = 27;
+        int class3 = 30;
+        int paper = 480;
         System.out.println("На каждого ученика рассчитано "+(paper /(class1 + class2 + class3))+ " листов бумаги");
 
         // Задача 4
-        byte bottle = 16;
-        byte time = 2;
-        System.out.println("За 20 минут машина произвела "+ bottle /time *20 +" штук бутылок");
-        System.out.println("За сутки машина произвела "+ bottle /time *24 *60 +" штук бутылок");
-        System.out.println("За 3 дня машина произвела "+ bottle /time *3 *24 *60 +" штук бутылок");
-        System.out.println("За 1 месяц машина произвела "+ bottle/time *30 *24 *60 +" штук бутылок");
+        int bottle = 16;
+        int time = 2;
+        int min = bottle /time;
+        int min20 = min *20;
+        System.out.println("За 20 минут машина произвела "+ min20 +" штук бутылок");
+        int day = min *60 *24;
+        System.out.println("За сутки машина произвела "+ day +" штук бутылок");
+        day = day *3;
+        System.out.println("За 3 дня машина произвела "+ day +" штук бутылок");
+        day = day *30;
+        System.out.println("За 1 месяц машина произвела "+ day +" штук бутылок");
 
         // Задача 5
-        byte remont = 120;
-        byte white = 2;
-        byte brown = 4;
+        int remont = 120;
+        int white = 2;
+        int brown = 4;
         int classes = remont /(white +brown);
-        System.out.println("В школе, где "+ classes +" классов, нужно "+ classes *2 + " банок белой краски и "+ classes *4 +" банок коричневой краски");
+        white = classes *2;
+        brown = classes *4;
+        System.out.println("В школе, где "+ classes +" классов, нужно "+ white + " банок белой краски и "+ brown +" банок коричневой краски");
 
         // Задача 6
         int bananas = 5 *80;
         int milks = 200 /100 *105;
         int iceCreams = 2 *100;
         int aggs = 4 *70;
-        float breakfast = (float) (bananas +milks +iceCreams +aggs);
-        System.out.println("Вес завтрака спортсмена составляет "+ breakfast +" г или "+ (breakfast /1000) +" кг");
+        int breakfast = (bananas +milks +iceCreams +aggs);
+        double breakfast1 = breakfast /1000;
+        System.out.println("Вес завтрака спортсмена составляет "+ breakfast +" г или "+ breakfast1 +" кг");
 
         // Задача 7
-        float weight =(float) 7 *1000;
-        short delta1 = 250;
-        short delta2 = 500;
-        System.out.println("При похудении по "+ delta1 +" г в день потребуется "+ (weight /delta1) +" дней");
-        System.out.println("При похудении по "+ delta2 +" г в день потребуется "+ (weight /delta2) +" дней");
-        System.out.println("В среднем для похудения может понадобиться "+ (weight /((delta1 +delta2) /2) +" дней"));
+        double weight = 7 *1000;
+        int delta1 = 250;
+        int delta2 = 500;
+        double days = weight /delta1;
+        System.out.println("При похудении по "+ delta1 +" г в день потребуется "+ days +" дней");
+        days = weight /delta2;
+        System.out.println("При похудении по "+ delta2 +" г в день потребуется "+ days +" дней");
+        days = weight /((delta1 +delta2) /2);
+        System.out.println("В среднем для похудения может понадобиться "+ days +" дней");
 
         // Задача 8
-        int M = 67760;
-        int D = 83690;
-        int K = 76230;
-        System.out.println("Маша теперь получает "+ (M *1.1) +" рублей. Годовой доход вырос на "+ (M *.1 *12) +" рублей.");
-        System.out.println("Денис теперь получает "+ (D *1.1) +" рублей. Годовой доход вырос на "+ (D *.1 *12) +" рублей.");
-        System.out.println("Кристина теперь получает "+ (K *1.1) +" рублей. Годовой доход вырос на "+ (K *.1 *12) +" рублей.");
+        int masha = 67760;
+        int denis = 83690;
+        int kristina = 76230;
+        double s1 = 1.1;
+        double s2 = .1 *12;
+        double  salary = masha * s1;
+        double salary1 = masha * s2;
+        System.out.println("Маша теперь получает "+ salary +" рублей. Годовой доход вырос на "+ salary1 +" рублей.");
+        salary = denis * s1;
+        salary1 = denis * s2;
+        System.out.println("Денис теперь получает "+ salary +" рублей. Годовой доход вырос на "+ salary1 +" рублей.");
+        salary = kristina * s1;
+        salary1 = kristina * s2;
+        System.out.println("Кристина теперь получает "+ salary +" рублей. Годовой доход вырос на "+ salary1 +" рублей.");
     }
 }
